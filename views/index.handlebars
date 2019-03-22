@@ -3,10 +3,10 @@
 <div class="devoured">
     {{#each burger}}
         {{#if devoured}}
-            <div class="burger" burger-id="{{burger_name}}" burger-devoured="{{devoured}}">
+            <div class="burger" burger-name="{{burger_name}}">
                 <h3>{{burger_name}}</h3>
-                <button id="{{burger_name}}" burger-id="{{id}}">
-                    {{#if devoured}}Consume!{{else}}Order!{{/if}}
+                <button class="burger-button" data-name="{{burger_name}}" data-id="{{id}}" data-devoured="{{devoured}}">
+                    {{#unless devoured}}Consume!{{else}}Order!{{/unless}}
                 </button>
             </div>
         {{/if}}
@@ -20,11 +20,11 @@
 
 <div class="not-devoured">
     {{#each burger}}
-        {{#unless !devoured}}
-            <div class="burger" burger-id="{{burger_name}}" burger-devoured="{{devoured}}">
+        {{#unless devoured}}
+            <div class="burger" burger-name="{{burger_name}}">
                 <h3>{{burger_name}}</h3>
-                <button id="{{burger_name}}" burger-id="{{id}}">
-                    {{#if devoured}}Consume!{{else}}Order!{{/if}}
+                <button class="burger-button" data-name="{{burger_name}}" data-id="{{id}}" data-devoured="{{devoured}}">
+                    {{#unless devoured}}Consume!{{else}}Order!{{/unless}}
                 </button>
             </div>
         {{/unless}}

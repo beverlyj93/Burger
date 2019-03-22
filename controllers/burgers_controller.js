@@ -12,13 +12,13 @@ router.get('/', (req, res) => {
 })
 
 router.post('/api/burger', (req, res) => {
-    burger.insertOne('burger_name', req.body.name, result => {
+    burger.insertOne('burger_name', req.body.burger_name, result => {
         res.json(result);
     })
 })
 
 router.put('/api/burger/:id', (req, res) => {
-    burger.updateOne('burger_name', req.body.name, 'id', req.body.id, result => {
+    burger.updateOne('burger_name', req.body.burger_name, 'id', req.params.id, result => {
         res.json(result);
     })
 })
