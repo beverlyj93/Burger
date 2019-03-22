@@ -1,0 +1,32 @@
+<header>Burger Something</header>
+
+<div class="devoured">
+    {{#each burger}}
+        {{#if devoured}}
+            <div class="burger" burger-id="{{burger_name}}" burger-devoured="{{devoured}}">
+                <h3>{{burger_name}}</h3>
+                <button id="{{burger_name}}" burger-id="{{id}}">
+                    {{#if devoured}}Consume!{{else}}Order!{{/if}}
+                </button>
+            </div>
+        {{/if}}
+    {{/each}}
+</div>
+
+<div class="create">
+    <input id="burger-name" type="text" placeholder="Enter the name of your burger">
+    <button id="new-burger" type="button">Add Burger</button>
+</div>
+
+<div class="not-devoured">
+    {{#each burger}}
+        {{#unless !devoured}}
+            <div class="burger" burger-id="{{burger_name}}" burger-devoured="{{devoured}}">
+                <h3>{{burger_name}}</h3>
+                <button id="{{burger_name}}" burger-id="{{id}}">
+                    {{#if devoured}}Consume!{{else}}Order!{{/if}}
+                </button>
+            </div>
+        {{/unless}}
+    {{/each}}
+</div>
