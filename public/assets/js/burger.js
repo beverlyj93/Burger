@@ -1,7 +1,7 @@
 $(document).ready(() => {
     $('#new-burger').click(() => {
         let burger = {
-            'burger_name': $(burger-name).val(),
+            'burger_name': $('#burger-name').val(),
             'devoured': false
         }
 
@@ -17,7 +17,7 @@ $(document).ready(() => {
 
         let newBurger = {
             'burger_name': name,
-            'devoured': devoured
+            'devoured': true
         }
 
         $.ajax(`/api/burger/${id}`, {

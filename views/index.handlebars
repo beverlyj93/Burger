@@ -1,12 +1,13 @@
 <header>Burger Something</header>
 
 <div class="devoured">
+    <h4>DEVOURED!</h4>
     {{#each burger}}
         {{#if devoured}}
             <div class="burger" burger-name="{{burger_name}}">
                 <h3>{{burger_name}}</h3>
                 <button class="burger-button" data-name="{{burger_name}}" data-id="{{id}}" data-devoured="{{devoured}}">
-                    {{#unless devoured}}Consume!{{else}}Order!{{/unless}}
+                    {{#unless devoured}}Devour It!{{else}}Reorder!{{/unless}}
                 </button>
             </div>
         {{/if}}
@@ -14,17 +15,19 @@
 </div>
 
 <div class="create">
+    <h4>CREATE NEW BURGER!</h4>
     <input id="burger-name" type="text" placeholder="Enter the name of your burger">
     <button id="new-burger" type="button">Add Burger</button>
 </div>
 
 <div class="not-devoured">
+    <h4>NOT DEVOURED!</h4>
     {{#each burger}}
         {{#unless devoured}}
             <div class="burger" burger-name="{{burger_name}}">
                 <h3>{{burger_name}}</h3>
                 <button class="burger-button" data-name="{{burger_name}}" data-id="{{id}}" data-devoured="{{devoured}}">
-                    {{#unless devoured}}Consume!{{else}}Order!{{/unless}}
+                    {{#unless devoured}}Devour It!{{else}}Reorder!{{/unless}}
                 </button>
             </div>
         {{/unless}}
