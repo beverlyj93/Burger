@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `burgers_db`;
-USE `burgers_db`;
+CREATE DATABASE IF NOT EXISTS `f40fw2jqiz1m1a0h`;
+USE `f40fw2jqiz1m1a0h`;
 CREATE TABLE IF NOT EXISTS `burgers` (
     `id` INTEGER PRIMARY KEY AUTO_INCREMENT,
     `burger_name` VARCHAR(24) NOT NULL,

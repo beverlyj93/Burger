@@ -9,7 +9,7 @@ else {
         port: 3306,
         user: 'root',
         password: 'MyMySQL93!@',
-        database: 'burgers_db'
+        database: 'f40fw2jqiz1m1a0h'
     });
 }
 
