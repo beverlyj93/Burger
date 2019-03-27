@@ -14,5 +14,5 @@ var routes = require('./controllers/burgers_controller');
 app.use('/', routes);
 
 app.listen(PORT, () => {
-    console.log('I have begun eaves dropping on special number 3000.');
+    console.log(`I have begun eaves dropping on special number ${PORT}.`);
 })
